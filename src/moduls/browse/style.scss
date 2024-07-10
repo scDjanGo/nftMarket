@@ -1,0 +1,135 @@
+@import '../../index.scss';
+
+
+.browse-container {
+    padding: 80px 40px;
+
+
+    h2 {
+        margin-bottom: 60px;
+        font-family: 'Work Sans';
+        font-weight: 600;
+        font-size: 38px;
+        color: $white-color;
+    }
+
+    .cat-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .categories {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 300px));
+            justify-content: center;
+            gap: 30px;
+
+            a {
+                border-radius: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                p {
+                    border-radius: 0 0 20px 20px;
+                    padding: 20px 30px;
+                    width: 100%;
+                    font-family: 'Work Sans';
+                    font-weight: 600;
+                    font-size: 22px;
+                    color: $white-color;
+                    background-color: $bg-grey;
+                }
+
+                img {
+                    max-width: 300px;
+                    width: 100%;
+                }
+
+                &:hover {
+                    box-shadow: 5px 5px 100px $bg-grey;
+                    transform: translateY(-5px);
+                }
+            }
+        }
+    }
+
+}
+
+
+@media (max-width: 835px) {
+
+    .browse-container {
+        padding: 80px 40px;
+
+        h2 {
+            font-size: 28px;
+        }
+
+        .cat-category {
+
+            .categories {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 250px));
+                gap: 15px;
+
+                a {
+                    max-width: 150px;
+                    width: 100%;
+
+                    img {
+                        max-width: 150px;
+                        width: 100%;
+                    }
+
+                    p {
+                        padding: 20px 15px;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .browse-container {
+        padding: 40px 20px;
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .cat-container {
+
+            .categories {
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                gap: 10px;
+
+                a {
+                    max-width: 140px;
+                    width: 100%;
+
+                    img {
+                        max-width: 140px;
+                        width: 100%;
+                    }
+
+                    p {
+                        height: 60px;
+                        border-radius: 0 0 10px 10px;
+                        padding: 10px 5px 0 5px;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+    }
+}

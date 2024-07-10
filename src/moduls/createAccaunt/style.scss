@@ -1,0 +1,286 @@
+@import '../../index.scss';
+
+
+.createAccaunt-container {
+
+    display: flex;
+    align-items: center;
+    gap: 120px;
+
+    .img-container {
+
+
+        img {
+            margin-top: auto;
+            height: 100%;
+        }
+
+        img:nth-child(2) {
+            display: none;
+        }
+
+        img:nth-child(3) {
+            display: none;
+        }
+    }
+
+    .createAccaunt-content {
+
+        .texts {
+            padding: 0 35px 0 0;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: start;
+
+            h2 {
+                width: 100%;
+                font-size: 52px;
+                color: $white-color;
+                font-weight: 600;
+                font-family: 'Work Sans';
+            }
+
+            p {
+                width: 100%;
+                font-size: 22px;
+                color: $white-color;
+                font-weight: 400;
+                font-family: 'Work Sans';
+            }
+        }
+
+        #createAccaunt-form {
+            padding: 0 35px 0 0;
+            margin-top: 15px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 10px;
+
+            div {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 15px;
+
+                button {
+                    padding: 5px;
+                    border-radius: 20px;
+                    border: 0;
+                    font-size: 22px;
+                    font-weight: 400;
+                    font-family: 'Work Sans';
+                    color: $white-color;
+                    background-color: $purple-color;
+
+                    &:hover {
+                        box-shadow: 5px 5px 30px $purple-color;
+                    }
+                }
+
+            }
+
+            label {
+                padding: 5px 10px;
+                border-radius: 20px;
+                background-color: $white-color;
+                padding-left: 10px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                input {
+                    width: 100%;
+                    font-size: 22px;
+                    font-weight: 400;
+                    font-family: 'Work Sans';
+                    border: none;
+
+                    &:focus {
+                        outline: none;
+                        background-color: $white-color;
+                    }
+                }
+            }
+
+            .bio {
+                padding: 10px;
+            }
+
+            .avatar-label {
+
+                background-color: black;
+                cursor: pointer;
+
+                #avatar{
+                    width: 1px;
+                    height: 1px;
+                    transform: translateX(-38px);
+                }
+
+                button {
+                    padding: 2px 0;
+                    border: none;
+                    color: $white-color;
+                    background-color: black;
+                    display: flex;
+                    align-items: center;
+                    font-size: 22px;
+                    font-weight: 400;
+                    font-family: 'Work Sans';
+                    gap: 10px;
+                    cursor: pointer;
+
+                    &:hover {
+                        box-shadow: none;
+                    }
+                }
+
+                &:hover {
+                    box-shadow: 5px 5px 50px black;
+                }
+            }
+
+            .error-message {
+                color: red;
+                font-family: 'Space Mono';
+                font-weight: 400;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media(max-width: 1180px) {
+
+    .createAccaunt-container {
+        gap: 60px;
+    }
+}
+
+
+@media(max-width: 1120px) {
+
+    .createAccaunt-container {
+        gap: 40px;
+
+        .img-container {
+
+
+            img {
+                margin-top: auto;
+                height: 100%;
+            }
+
+            img:nth-child(1) {
+                display: none;
+            }
+
+            img:nth-child(2) {
+                display: block;
+            }
+        }
+    }
+}
+
+@media(max-width: 900px) {
+    .createAccaunt-container {
+
+        .createAccaunt-content {
+
+            .texts {
+                padding: 0 25px 0 0;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                align-items: start;
+
+                h2 {
+                    font-size: 38px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:740px) {
+    .createAccaunt-container {
+    
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+    
+        .img-container {
+            width: 100%;
+    
+            img:nth-child(2) {
+                display: none;
+            }
+    
+            img:nth-child(3) {
+                width: 100%;
+                display: block;
+            }
+        }
+    
+        .createAccaunt-content {
+    
+            .texts {
+                padding: 0 10px;
+                flex-direction: column;
+                gap: 15px;
+    
+                h2 {
+                    text-align: center;
+                    font-size: 32px;
+                }
+    
+                p {
+                    text-align: center;
+                    font-size: 16px;
+                }
+            }
+    
+            #createAccaunt-form {
+                padding: 0 15px 15px 15px;
+    
+                div {
+    
+                    button {
+                        padding: 5px;
+                        font-size: 20px;
+                    }
+    
+                }
+    
+                label {
+                    padding: 3px 7px;
+                    padding-left: 10px;
+                    gap: 7px;
+    
+                    input {
+                        font-size: 20px;
+                    }
+                }
+    
+                .avatar-label {
+    
+                    button {
+                        font-size: 20px;
+                        gap: 7px;
+                    }
+                }
+            }
+        }
+    }
+}

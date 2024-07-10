@@ -1,0 +1,226 @@
+@import '../../index.scss';
+
+
+.signIn-container {
+    * {
+        transition: all .2s ease-in-out;
+    }
+
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 120px;
+
+    .img-container {
+
+        img:nth-child(2) {
+            display: none;
+        }
+
+        img:nth-child(3) {
+            display: none;
+        }
+    }
+
+    .signIn-content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 35px;
+
+        .texts {
+            padding: 0 20px;
+            display: flex;
+            align-items: start;
+            flex-direction: column;
+            gap: 35px;
+
+            h2 {
+                font-family: 'Work Sans';
+                font-size: 52px;
+                font-weight: 600;
+                color: $white-color;
+            }
+
+            p {
+                font-family: 'Work Sans';
+                font-size: 22px;
+                font-weight: 400;
+                color: $white-color;
+            }
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 15px;
+
+            label {
+                width: 330px;
+                border-radius: 20px;
+                background-color: $white-color;
+                padding: 16px 20px;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+
+                input {
+                    width: 100%;
+                    border: 0;
+                    font-family: 'Work Sans';
+                    font-size: 22px;
+                    font-weight: 400;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+
+
+            .input-error {
+                border: 3px solid red;
+                box-shadow: 5px 5px 30px red;
+            }
+
+            .error-message {
+                color: red;
+                font-size: .9em;
+            }
+
+            button {
+                padding: 12px 0;
+                border: 0;
+                background-color: $purple-color;
+                border-radius: 20px;
+                width: 100%;
+                font-family: 'Work Sans';
+                font-size: 22px;
+                font-weight: 600;
+                color: $white-color;
+
+                &:hover {
+                    box-shadow: 5px 5px 50px $purple-color;
+                }
+            }
+
+            .error {
+                width: 100%;
+                text-align: center;
+                color: red;
+                font-size: 16px;
+                font-weight: 400;
+                font-family: 'Work Sans';
+            }
+        }
+    }
+}
+
+@media(max-width: 1085px) {
+    .signIn-container {
+        gap: 30px;
+
+
+        .signIn-content {
+
+            form {
+                margin: 0 40px;
+                width: 100%;
+
+                label {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+@media(max-width: 1000px) {
+    .signIn-container {
+        padding-bottom: 25px;
+        gap: 30px;
+
+
+        .img-container {
+            img:nth-child(1) {
+                display: none;
+            }
+
+            img:nth-child(2) {
+                display: block;
+            }
+        }
+
+    }
+}
+
+
+@media(max-width: 790px) {
+    .signIn-container {
+        flex-direction: column;
+
+        .img-container {
+            width: 100%;
+
+            img:nth-child(2) {
+                display: none;
+            }
+
+            img:nth-child(3) {
+                display: block;
+                width: 100%;
+            }
+        }
+
+    }
+}
+
+
+
+@media(max-width: 550px) {
+    .signIn-container {
+        flex-direction: column;
+
+        .img-container {
+            width: 100%;
+
+            img:nth-child(2) {
+                display: none;
+            }
+
+            img:nth-child(3) {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        .signIn-content {
+
+            .texts {
+                padding: 10px 15px;
+
+                h2 {
+                    font-size: 38px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+            }
+
+
+            form {
+                margin: 0 40px;
+                padding: 0 20px;
+                width: 100%;
+
+                label {
+                    width: 100%;
+                }
+            }
+        }
+
+    }
+}

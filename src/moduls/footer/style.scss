@@ -1,0 +1,238 @@
+@import '../../index.scss';
+
+.footer-container {
+    padding: 40px 107px;
+    background-color: $bg-grey;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+
+    .social {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 15px;
+
+        .zag {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            h2 {
+                font-family: 'Work Sans';
+                color: $white-color;
+            }
+        }
+
+        p {
+            font-family: 'Work Sans';
+            color: #CCCCCC;
+            font-weight: 400;
+            font-size: 16px;
+        }
+
+        .social-logos {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+    }
+
+    ul {
+        display: flex;
+        list-style: none;
+        flex-direction: column;
+        align-items: start;
+        gap: 15px;
+        font-family: 'Work Sans';
+        color: #CCCCCC;
+        font-weight: 400;
+        font-size: 16px;
+
+        li:nth-child(1) {
+            color: $white-color;
+            font-family: 'Space Mono';
+            font-weight: 700;
+            font-size: 22px;
+        }
+    }
+
+
+    .email-container {
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+
+        h2 {
+            font-family: 'Work Sans';
+            font-weight: 600;
+            font-size: 38px;
+            color: $white-color;
+        }
+
+        p {
+            margin: 10px 0 50px 0;
+            font-family: 'Work Sans';
+            font-weight: 400;
+            font-size: 22px;
+            color: #CCCCCC;
+        }
+
+        form {
+            max-width: 420px;
+            width: 100%;
+            position: relative;
+
+            input {
+                max-width: 420px;
+                width: 100%;
+                border-radius: 20px;
+                padding: 16px 20px;
+                font-family: 'Work Sans';
+                font-weight: 400;
+                font-size: 16px;
+                border: 0;
+            }
+
+            button {
+                padding: 11.3px 45px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                flex-direction: row;
+                background-color: $purple-color;
+                border: 0;
+                border-radius: 20px;
+                right: 0;
+                top: 0;
+                position: absolute;
+
+                p {
+                    margin: 0;
+                    font-family: 'Work Sans';
+                    font-weight: 600;
+                    font-size: 16px;
+                    color: $white-color;
+                }
+
+                div {
+                    padding-top: 5px;
+                }
+
+                &:hover {
+                    box-shadow: 5px 5px 50px $purple-color;
+                }
+            }
+        }
+    }
+
+    .email-container.none {
+        display: none;
+    }
+}
+
+
+@media(max-width:900px) {
+
+    .footer-container {
+        flex-direction: column;
+        gap: 25px;
+
+        padding: 40px 70px;
+    }
+}
+
+
+@media(max-width: 555px) {
+    .footer-container {
+
+        padding: 20px 20px;
+        background-color: $bg-grey;
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+
+        .social {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 15px;
+
+            .zag {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                h2 {
+                    font-family: 'Work Sans';
+                    color: $white-color;
+                }
+            }
+
+            p {
+                font-family: 'Work Sans';
+                color: #CCCCCC;
+                font-weight: 400;
+                font-size: 16px;
+            }
+
+            .social-logos {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+            }
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+            flex-direction: column;
+            align-items: start;
+            gap: 15px;
+            font-family: 'Work Sans';
+            color: #CCCCCC;
+            font-weight: 400;
+            font-size: 16px;
+
+            li:nth-child(1) {
+                color: $white-color;
+                font-family: 'Space Mono';
+                font-weight: 700;
+                font-size: 22px;
+            }
+        }
+
+
+        .email-container {
+            display: flex;
+            align-items: start;
+            flex-direction: column;
+
+            h2 {
+                font-family: 'Work Sans';
+                font-weight: 600;
+                font-size: 22px;
+                color: $white-color;
+            }
+
+            p {
+                margin: 10px 0 50px 0;
+                font-family: 'Work Sans';
+                font-weight: 400;
+                font-size: 18px;
+                color: #CCCCCC;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+
+                button {
+                    margin-top: 20px;
+                    justify-content: center;
+                    position: relative;
+                }
+            }
+        }
+    }
+}

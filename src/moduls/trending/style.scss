@@ -1,0 +1,257 @@
+@import '../../index.scss';
+
+.myPage-container {
+    padding: 20px;
+    background: url(../../../public/userAbout/backImg.png) center no-repeat;
+    background-size: cover;
+
+    .myPage-inner {
+
+        .myPage {
+            margin: 20px 0 40px 0;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+
+            a {
+                border-radius: 20px;
+                padding: 10px 20px;
+                font-size: 32px;
+                font-weight: 700;
+                font-family: 'Work Sans';
+                color: $white-color;
+                box-shadow: 5px 5px 10px black;
+                background-color: $purple-color;
+
+                &:hover {
+                    box-shadow: 5px 5px 50px $purple-color;
+                }
+            }
+        }
+
+        .nfts {
+            width: 100%;
+            display: flex;
+            align-items: start;
+            justify-content: center;
+            gap: 15px;
+
+            div {
+                width: 100%;
+                max-width: 300px;
+                min-width: 60px;
+                display: flex;
+                justify-content: center;
+                cursor: pointer;
+
+                img {
+                    width: 100%;
+                    max-width: 300px;
+                    min-width: 60px;
+                    border-radius: 15px;
+                    transition: width 0.2s ease-in-out;
+                }
+            }
+        }
+
+        .emptyPageSearch {
+            margin: 40px 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 35px;
+
+            h2 {
+                text-align: center;
+                font-weight: 700;
+                font-size: 64px;
+                color: $white-color;
+                font-family: 'Work Sans';
+                text-shadow: 5px 5px 50px $purple-color;
+            }
+
+            a {
+                padding: 5px 15px;
+                border-radius: 10px;
+                font-size: 24px;
+                border: 3px solid $purple-color;
+                background-color: $purple-color;
+                cursor: pointer;
+                color: $white-color;
+                font-family: 'Work Sans';
+                box-shadow: 5px 5px 30px black;
+
+                &:hover {
+                    box-shadow: 5px 5px 50px $white-color
+                }
+            }
+        }
+
+        .about {
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            div {
+
+                img {
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                }
+            }
+
+            h2 {
+                font-size: 32px;
+                font-weight: 700;
+                font-family: 'Work Sans';
+                color: $white-color;
+            }
+        }
+
+        .bio {
+            margin-top: 30px;
+
+            span {
+                font-size: 16px;
+                font-weight: 700;
+                font-family: 'Work Sans';
+                color: $bg-grey;
+            }
+
+            p {
+                text-align: start;
+                font-size: 24px;
+                font-weight: 700;
+                font-family: 'Work Sans';
+                color: $white-color;
+            }
+        }
+    }
+
+    .noMyPage {
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 35px;
+
+        h2 {
+            color: $white-color;
+            font-weight: 700;
+            font-family: 'Work Sans';
+            font-size: 32px;
+            text-align: center;
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+
+            a {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                text-decoration: none;
+                font-family: 'Work Sans';
+                color: $white-color;
+                font-weight: 600;
+                font-size: 24px;
+                padding: 12px 20px;
+                background-color: $purple-color;
+                border: 0;
+                cursor: pointer;
+                border-radius: 20px;
+                border: 3px solid $white-color;
+
+                &:hover {
+                    background-color: $purple-color;
+                    box-shadow: 5px 5px 30px $white-color;
+                    transform: translateY(-5px);
+                }
+            }
+        }
+    }
+}
+
+
+@media(max-width: 920px) {
+    .myPage-container {
+
+        .myPage-inner {
+
+            .myPage {
+
+                a {
+                    font-size: 22px;
+                }
+            }
+
+            .emptyPageSearch {
+
+                h2 {
+                    font-size: 42px;
+                }
+
+                a {
+                    font-size: 18px;
+                }
+            }
+
+            .about {
+
+                h2 {
+                    font-size: 28px;
+                }
+            }
+        }
+
+        .noMyPage {
+
+            h2 {
+                font-size: 28px;
+            }
+
+            div {
+
+                a {
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}
+
+
+@media(max-width: 550px) {
+    .myPage-container {
+
+        .myPage-inner {
+
+            .emptyPageSearch {
+
+                h2 {
+                    font-size: 32px;
+                }
+            }
+
+            .about {
+
+                h2 {
+                    font-size: 24px;
+                }
+            }
+        }
+
+        .noMyPage {
+
+            h2 {
+                font-size: 22px;
+            }
+        }
+    }
+}

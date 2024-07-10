@@ -1,0 +1,850 @@
+@import '../../index.scss';
+
+.nftProfile-container {
+
+    .edit-nft {
+        .edit-container {
+
+            .edit {
+                padding-top: 150px;
+                display: flex;
+                position: fixed;
+                z-index: 20;
+                width: 100%;
+                height: 120vh;
+                align-items: start;
+                justify-content: center;
+                background-image: url(../../../public/userAbout/backImg.png);
+                background-size: cover;
+                transform: translateY(-100%) scale(0);
+
+                form {
+
+                    .close {
+                        z-index: 21;
+                        top: 6px;
+                        right: 20px;
+                        position: absolute;
+                        cursor: pointer;
+                    }
+
+                    .nft-image {
+                        border-radius: 10px;
+                        width: 50px;
+                        height: 50px;
+                    }
+
+                    position: relative;
+                    padding: 20px 20px 20px 20px;
+                    margin: 0 20px;
+                    width: 600px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 10px;
+                    border-radius: 20px;
+                    background-color: rgba(255, 255, 255, 0.7);
+
+
+                    .close {
+                        z-index: 21;
+                        top: 6px;
+                        right: 20px;
+                        position: absolute;
+                        cursor: pointer;
+                    }
+
+                    input {
+                        padding: 5px 10px;
+                        border-radius: 20px;
+                        background-color: $white-color;
+                        padding-left: 10px;
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+
+                        font-size: 20px;
+                        font-weight: 400;
+                        font-family: 'Work Sans';
+                        border: none;
+
+                        &:focus {
+                            outline: none;
+                            background-color: $white-color;
+                        }
+                    }
+
+                    button {
+                        padding: 10px 20px;
+                        border-radius: 20px;
+                        border: 0;
+                        font-size: 22px;
+                        font-weight: 400;
+                        font-family: 'Work Sans';
+                        color: $white-color;
+                        background-color: $purple-color;
+                        cursor: pointer;
+
+                        &:hover {
+                            box-shadow: 5px 5px 30px $purple-color;
+                        }
+                    }
+
+                    p {
+                        padding-left: 10px;
+                        width: 100%;
+                        font-size: 18px;
+                        font-weight: 400;
+                        font-family: 'Work Sans';
+                        color: $bg-grey;
+                    }
+                }
+            }
+
+            .edit.on {
+                transform: translateY(-120px) scale(1);
+            }
+        }
+    }
+
+    .del-nft {
+
+        .del-container {
+            padding: 0 20px 230px 20px;
+            background: url(../../../public/userAbout/backImg.png) center no-repeat;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            width: 100%;
+            height: 140vh;
+            z-index: 20;
+            transform: translateY(-100%) scale(0);
+
+            .del {
+                background-color: rgba(255, 255, 255, 0.7);
+                padding: 40px 20px 20px 20px;
+                max-width: 500px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                gap: 25px;
+                position: relative;
+                border-radius: 20px;
+
+                .close {
+                    z-index: 21;
+                    top: 6px;
+                    right: 20px;
+                    position: absolute;
+                    cursor: pointer;
+                }
+
+                .nft-image {
+                    margin: 0 15px;
+                    border-radius: 10px;
+                    max-width: 300px;
+                    width: 100%;
+                }
+            }
+
+            h2 {
+                text-align: center;
+                font-size: 32px;
+                color: $purple-color;
+                font-family: 'Work Sans';
+                font-weight: 700;
+            }
+
+            div {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                gap: 10px;
+
+                span {
+                    width: 100%;
+                    size: 18px;
+                    color: $bg-grey;
+                    font-family: 'Work Sans';
+                    font-weight: 400;
+                }
+
+                p {
+                    text-align: center;
+                    size: 24px;
+                    color: $purple-color;
+                    font-family: 'Work Sans';
+                    font-weight: 700;
+                }
+            }
+
+            button {
+                padding: 10px 20px;
+                border-radius: 15px;
+                border: 3px solid $white-color;
+                font-size: 22px;
+                font-weight: 600;
+                font-family: 'Work Sans';
+                color: $white-color;
+                background-color: $purple-color;
+                cursor: pointer;
+
+                &:hover {
+                    transform: translateY(-3px);
+                    box-shadow: 5px 5px 50px black;
+                }
+            }
+        }
+
+        .del-container.on {
+            transform: translateY(-120px) scale(1);
+        }
+    }
+
+    .img-container {
+        padding: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: darken($shief-bgc, 20%);
+
+        .nftImg {
+            width: 330px;
+            min-width: 315px;
+            max-height: 90%;
+            border-radius: 20px;
+            box-shadow: 5px 5px 50px $purple-color;
+        }
+    }
+
+    .discription {
+        padding: 40px 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        position: relative;
+
+        .zag {
+            h2 {
+                font-size: 52px;
+                font-weight: 600;
+                color: $white-color;
+                font-family: 'Work Sans';
+            }
+
+            p {
+                font-size: 22px;
+                font-weight: 400;
+                color: #858584;
+                font-family: 'Work Sans';
+            }
+        }
+
+        .buy-nft {
+            width: auto;
+            display: none;
+            align-items: center;
+            gap: 15px;
+            justify-content: space-between;
+            position: absolute;
+            top: 40px;
+            right: 117px;
+
+
+            button {
+                font-size: 32px;
+                color: $white-color;
+                font-family: 'Work Sans';
+                font-weight: 700;
+                background-color: $purple-color;
+                border: 0;
+                cursor: pointer;
+                border: 3px solid $white-color;
+                box-shadow: 5px 5px 20px $purple-color;
+                background-color: $purple-color;
+                border-radius: 20px;
+                padding: 10px 20px;
+
+                &:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 5px 5px 50px $purple-color;
+                }
+            }
+        }
+
+        .buy-nft.notMe {
+            display: flex;
+        }
+
+        .creator {
+            p {
+                font-family: 'Space Mono';
+                font-size: 22px;
+                font-weight: 700;
+                color: #858584;
+            }
+
+            div {
+                margin-top: 10px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
+
+                p {
+                    font-family: 'Work Sans';
+                    font-weight: 600;
+                    font-size: 22px;
+                    color: $white-color;
+                }
+            }
+        }
+
+        .discription-text {
+            span {
+                font-family: 'Space Mono';
+                font-size: 22px;
+                font-weight: 700;
+                color: #858584;
+            }
+
+            p {
+                margin-top: 10px;
+                width: 650px;
+                font-weight: 400;
+                color: $white-color;
+                font-size: 22px;
+                font-family: 'Work Sans';
+
+                a {
+                    color: $purple-color;
+                }
+            }
+        }
+
+        .details {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            span {
+                font-family: 'Space Mono';
+                font-size: 22px;
+                font-weight: 700;
+                color: #858584;
+            }
+
+            div {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                p {
+                    font-family: 'Work Sans';
+                    font-size: 22px;
+                    font-weight: 400;
+                    color: $white-color;
+                }
+            }
+        }
+
+        .tags {
+            span {
+                font-weight: 600;
+                font-size: 22px;
+                color: #858584;
+                font-family: 'Space Mono';
+            }
+
+            div {
+                margin-top: 20px;
+                display: flex;
+                align-items: center;
+                gap: 20px;
+
+                p {
+                    padding: 12px 30px;
+                    font-weight: 600;
+                    font-family: 'Work Sans';
+                    color: $white-color;
+                    font-size: 16px;
+                    background-color: $bg-grey;
+                    border-radius: 20px;
+                }
+            }
+        }
+
+        .more {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            p {
+                font-weight: 600;
+                font-size: 38px;
+                color: $white-color;
+                font-family: 'Work Sans';
+            }
+
+            a {
+                padding: 19px 50px;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                border-radius: 20px;
+                background-color: rgba(255, 255, 255, 0);
+                border: 3px solid $purple-color;
+                cursor: pointer;
+
+                p {
+                    font-weight: 600;
+                    font-size: 16px;
+                    color: $white-color;
+                    font-family: 'Work Sans';
+                }
+
+                &:hover {
+                    box-shadow: 5px 5px 50px $purple-color;
+                }
+            }
+        }
+
+        .nfts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(315px, 330px));
+            justify-content: center;
+            gap: 30px;
+
+
+            .cart {
+                border-radius: 20px;
+                cursor: pointer;
+
+                .cartImg-container {
+                    width: 330px;
+                    height: 295px;
+
+                    img {
+                        border-radius: 20px 20px 0 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                }
+
+                .cartAbout {
+                    border-radius: 0 0 20px 20px;
+                    padding: 25px 30px;
+                    background-color: $bg-grey;
+
+                    h2 {
+                        margin-bottom: 5px;
+                        font-weight: 600;
+                        font-family: 'Work Sans';
+                        color: $white-color;
+                        font-size: 22px;
+                    }
+
+                    .cartCreator {
+                        margin-bottom: 27px;
+                        display: flex;
+                        align-items: center;
+                        gap: 12px;
+
+                        img {
+                            width: 24px;
+                            height: 24px;
+                        }
+
+                        h5 {
+                            font-family: 'Space Mono';
+                            font-size: 16px;
+                            color: $white-color;
+                            font-weight: 400;
+                        }
+                    }
+
+                    .price {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        div {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 8px;
+
+                            span {
+                                font-family: 'Space Mono';
+                                font-size: 12px;
+                                color: lighten($bg-grey, 20%);
+                                font-weight: 400;
+                            }
+
+                            p {
+                                font-family: 'Space Mono';
+                                font-size: 16px;
+                                color: $white-color;
+                                font-weight: 400;
+                            }
+                        }
+
+                        button {
+                            padding: 5px 10px;
+                            background-color: $purple-color;
+                            border-radius: 10px;
+                            border: 0;
+
+                            p {
+                                font-size: 16px;
+                                color: $white-color;
+                                font-weight: 400;
+                                font-family: 'Space Mono';
+                            }
+
+                            &:hover {
+                                box-shadow: 5px 5px 30px $purple-color;
+                            }
+                        }
+                    }
+                }
+
+                &:hover {
+                    box-shadow: 5px 5px 50px black;
+                }
+            }
+        }
+
+        .media-button {
+            display: none;
+        }
+    }
+}
+
+@media(max-width: 1200px) {
+
+    .nftProfile-container {
+
+        .discription {
+
+            .buy-nft {
+                right: 40px;
+            }
+        }
+    }
+}
+
+@media(max-width: 995px) {
+
+    .nftProfile-container {
+
+        .discription {
+            padding: 40px 40px;
+
+            .zag {
+                h2 {
+                    font-size: 38px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+            }
+
+            .buy-nft {
+
+                button {
+                    font-size: 24px;
+                }
+            }
+
+            .creator {
+                p {
+                    font-size: 16px;
+                }
+
+                div {
+
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            .discription-text {
+                span {
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+
+                p {
+                    max-width: 600px;
+                    width: 100%;
+                    font-weight: 400;
+                    font-size: 16px;
+                }
+            }
+
+            .details {
+
+                span {
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+
+                div {
+
+                    p {
+                        font-size: 16px;
+                        font-weight: 400;
+                    }
+                }
+            }
+
+            .tags {
+                span {
+                    font-weight: 400;
+                    font-size: 16px;
+                }
+
+                div {
+                    flex-wrap: wrap;
+
+                    p {
+                        padding: 12px 30px;
+                    }
+                }
+            }
+
+            .more {
+
+                p {
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+}
+
+
+@media(max-width: 780px) {
+    .nftProfile-container {
+
+        .discription {
+            padding: 40px 40px;
+
+            .zag {
+                h2 {
+                    font-size: 38px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+            }
+
+            .buy-nft {
+
+                button {
+                    font-size: 18px;
+                }
+            }
+
+            .creator {
+                p {
+                    font-size: 16px;
+                }
+
+                div {
+
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            .discription-text {
+                span {
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+
+                p {
+                    max-width: 600px;
+                    width: 100%;
+                    font-weight: 400;
+                    font-size: 16px;
+                }
+            }
+
+            .details {
+
+                span {
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+
+                div {
+
+                    p {
+                        font-size: 16px;
+                        font-weight: 400;
+                    }
+                }
+            }
+
+            .tags {
+                span {
+                    font-weight: 400;
+                    font-size: 16px;
+                }
+
+                div {
+                    flex-wrap: wrap;
+
+                    p {
+                        padding: 12px 30px;
+                    }
+                }
+            }
+
+            .more {
+
+                p {
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+}
+
+
+@media(max-width: 655px) {
+    .nftProfile-container {
+
+        .discription {
+            padding: 20px;
+
+
+            .zag {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+
+                h2 {
+                    font-size: 28px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+            }
+
+
+            .buy-nft {
+                max-width: 350px;
+                width: 100%;
+                position: relative;
+                top: 0;
+                right: 0;
+                justify-content: start;
+
+                button {
+                    padding: 5xp 10px;
+                    font-size: 20px;
+                }
+            }
+
+            .creator {
+                p {
+                    font-size: 16px;
+                }
+
+                div {
+
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            .more {
+                display: none;
+            }
+
+
+            .discription-text {
+                span {
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+
+                p {
+                    max-width: 600px;
+                    width: 100%;
+                    font-weight: 400;
+                    font-size: 16px;
+                }
+            }
+
+            .details {
+
+                span {
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+
+                div {
+
+                    p {
+                        font-size: 16px;
+                        font-weight: 400;
+                    }
+                }
+            }
+
+            .tags {
+                span {
+                    font-weight: 400;
+                    font-size: 16px;
+                }
+
+                div {
+                    flex-wrap: wrap;
+
+                    p {
+                        padding: 12px 30px;
+                    }
+                }
+            }
+        }
+
+        .nfts {
+
+            .cart {
+                width: 315px;
+
+                .cartImg-container {
+
+                    img {
+                        width: 315px !important;
+                    }
+
+                }
+            }
+        }
+
+
+        .media-button {
+            display: flex;
+        }
+    }
+}

@@ -1,0 +1,394 @@
+@import '../../index.scss';
+
+
+.addNFT-container {
+
+    .container-inner {
+        position: relative;
+        background-image: url(../../../public/userAbout/backImg.png);
+        background-size: cover;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 180px;
+
+        .ok {
+            transform: translateX(-100%) scale(0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 140vh;
+            backdrop-filter: blur(20px);
+            position: absolute;
+            z-index: 30;
+
+            div {
+                padding: 10px 20px;
+                border-radius: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: 35px;
+                background-color: $purple-color;
+                border: 3px solid $white-color;
+
+                h2 {
+                    font-weight: 700;
+                    color: $white-color;
+                    font-size: 32px;
+                    font-family: 'Space mono';
+                }
+
+                p {
+                    font-weight: 400;
+                    color: $white-color;
+                    font-size: 24px;
+                    font-family: 'Space mono';
+                }
+
+                a {
+                    position: relative;
+                    left: 0;
+                    top: 0;
+                    border-radius: 10px;
+                    font-size: 32px;
+                    color: $white-color;
+                    font-weight: 700;
+                    font-family: 'Work Sans';
+                    padding: 5px 20px;
+                    border: 3px solid $white-color;
+                    background-color: $purple-color;
+                    cursor: pointer;
+                    box-shadow: 2px 2px 2px $purple-color;
+
+                    &:hover {
+                        box-shadow: 5px 5px 50px $white-color;
+                        transform: translateY(-5px);
+                    }
+                }
+            }
+        }
+
+        .ok.on {
+            transform: translateX(0) scale(1);
+        }
+
+        a {
+            position: absolute;
+            left: 110px;
+            top: 20px;
+            border-radius: 10px;
+            font-size: 32px;
+            color: $white-color;
+            font-weight: 700;
+            font-family: 'Work Sans';
+            padding: 5px 20px;
+            border: 3px solid $white-color;
+            background-color: rgba(255, 255, 255, .2);
+            cursor: pointer;
+
+            &:hover {
+                box-shadow: 5px 5px 50px $white-color;
+                color: $purple-color;
+                background-color: $white-color;
+            }
+        }
+
+        .modal {
+            margin-top: 50px;
+            width: 100%;
+            padding-top: 35px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 15px;
+
+            img {
+                max-width: 160px;
+                width: 100%;
+                max-height: 160px;
+                height: 100%;
+                border-radius: 20px;
+            }
+
+
+            form {
+                width: 100%;
+                margin: 0 25px;
+                display: flex;
+                align-items: start;
+                gap: 15px;
+                flex-direction: column;
+                padding: 20px;
+                background-color: rgba(255, 255, 255, .5);
+                border-radius: 20px;
+
+                #newNFT {
+                    display: none;
+                }
+
+                label {
+                    font-weight: 600;
+                    font-family: 'Work Sans';
+                    font-size: 32px;
+                    color: $white-color;
+
+
+                    .custom-file-button {
+                        width: 100%;
+                        background-color: rgb(222, 131, 222);
+                        box-shadow: none;
+                    }
+
+                    input {
+                        width: 100%;
+                        border-radius: 10px;
+                        font-size: 32px;
+                        border: 0;
+                        padding: 5px 15px;
+                        text-align: start;
+                    }
+
+                    textarea {
+                        width: 108%;
+                        border-radius: 10px;
+                        font-size: 32px;
+                        border: 0;
+                        padding: 5px 15px;
+                        text-align: start;
+                        font-family: 'Work Sans';
+                    }
+                }
+
+                #tags {
+                    max-width: 430px;
+                    width: 100%;
+                    height: 100px;
+                    border-radius: 10px;
+                    border: 0;
+
+                    option {
+                        padding: 2px 10px;
+                        width: 100%;
+                        font-weight: 600;
+                        font-family: 'Work Sans';
+                        font-size: 32px;
+                        width: 600px;
+                    }
+
+                    option:hover {
+                        background-color: $purple-color;
+                        color: $white-color;
+                        cursor: pointer;
+                    }
+
+                    &:focus {
+                        outline: 0;
+                    }
+                }
+
+                #categories {
+                    max-width: 430px;
+                    width: 100%;
+
+                    #category {
+                        border-radius: 5px;
+                        border: 0;
+                        width: 100%;
+                        font-weight: 600;
+                        font-family: 'Work Sans';
+                        font-size: 32px;
+                        width: 600px;
+                        cursor: pointer;
+                    }
+                }
+
+                button {
+                    border-radius: 20px;
+                    font-size: 32px;
+                    color: $white-color;
+                    font-weight: 700;
+                    font-family: 'Work Sans';
+                    padding: 5px 20px;
+                    border: 3px solid $white-color;
+                    background-color: $purple-color;
+                    cursor: pointer;
+                    box-shadow: 2px 2px 2px $purple-color;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    img {
+                        width: 44px;
+                        border-radius: 0;
+                    }
+
+                    &:hover {
+                        box-shadow: 5px 5px 50px $white-color;
+                        transform: translateY(-5px);
+                    }
+                }
+
+                div {
+                    padding: 10px 15px;
+                    border-radius: 10px;
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    flex-wrap: wrap;
+                    background-color: $purple-color;
+
+                    h3 {
+                        border-radius: 5px;
+                        font-size: 28px;
+                        color: $white-color;
+                    }
+
+                    label {
+                        border-radius: 5px;
+                        font-size: 24px;
+                        color: $white-color;
+
+                        input {
+                            cursor: pointer;
+                        }
+
+                        &:hover {
+                            color: rgb(222, 131, 222);
+                        }
+                    }
+                }
+
+                .select-category {
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                    font-size: 24px;
+                    color: $white-color;
+                    background-color: $purple-color;
+                }
+
+                .error-message {
+                    max-width: 600px;
+                    width: 100%;
+                    padding: 5px 10px;
+                    color: red;
+                    font-size: 18px;
+                    font-family: 'Space Mono';
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 1280px) {
+
+    .addNFT-container {
+
+        .container-inner {
+
+            a {
+                left: 20px;
+            }
+        }
+    }
+}
+
+
+@media(max-width: 680px) {
+
+    .addNFT-container {
+
+        .container-inner {
+            padding-bottom: 80px;
+
+            .ok {
+
+                div {
+                    padding: 5px 15px;
+                    gap: 25px;
+
+                    h2 {
+                        font-weight: 500;
+                        font-size: 24px;
+                    }
+
+                    p {
+                        font-size: 16px;
+                    }
+
+                    a {
+                        font-size: 24px;
+                        font-weight: 400;
+                        padding: 5px 20px;
+                    }
+                }
+            }
+
+            a {
+                font-size: 24px;
+                font-weight: 500;
+            }
+
+            .modal {
+
+                img {
+                    max-width: 100px;
+                    max-height: 100px;
+                    border-radius: 10px;
+                }
+
+                form {
+                    width: 100%;
+
+                    label {
+                        width: 100%;
+
+                        input {
+                            width: 100%;
+                            font-size: 24px;
+                        }
+
+                        textarea {
+                            width: 100%;
+                            font-size: 24px;
+                        }
+                    }
+
+                    #tags {
+                        max-width: 430px;
+                        height: 100px;
+                        border-radius: 20px;
+                        border: 0;
+
+                        option {
+                            font-weight: 400;
+                            font-size: 22px;
+                            width: 100%;
+                        }
+                    }
+
+                    #categories {
+
+                        #category {
+                            width: 100%;
+                            border-radius: 5px;
+                            border: 0;
+                            font-weight: 400;
+                            font-family: 'Work Sans';
+                            font-size: 22px;
+                        }
+                    }
+
+                    button {
+                        font-size: 24px;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,300 @@
+@import '../../index.scss';
+
+.getSatrted-container {
+    * {
+        transition: all .3s ease-in-out;
+    }
+
+    padding: 80px 107px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 30px;
+
+    .getStarted-left {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        gap: 30px;
+
+        h1 {
+            font-family: 'Work Sans';
+            color: $white-color;
+            font-size: 67px;
+            font-weight: 600;
+
+            p {
+                font-family: 'Work Sans';
+                color: $white-color;
+                font-size: 67px;
+                font-weight: 600;
+            }
+        }
+
+        p {
+            font-family: 'Work Sans';
+            color: $white-color;
+            font-size: 22px;
+            font-weight: 400;
+        }
+
+        .getStart {
+            padding: 15px 50px;
+            display: flex;
+            align-items: center;
+            background-color: $purple-color;
+            border-radius: 20px;
+            border: 0;
+            gap: 10px;
+            cursor: pointer;
+
+            p {
+                font-family: 'Work Sans';
+                color: $white-color;
+                font-size: 16px;
+                font-weight: 600;
+            }
+
+            &:hover {
+                box-shadow: 5px 5px 50px $purple-color;
+            }
+        }
+
+
+        .schedule {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+
+            div {
+                width: 150px;
+
+                h2 {
+                    font-family: 'Space mono';
+                    color: $white-color;
+                    font-size: 28px;
+                    font-weight: 700;
+                }
+
+                p {
+                    font-family: 'Work Sans';
+                    color: $white-color;
+                    font-size: 24px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+    .media-button {
+        display: none;
+    }
+
+    .getStarted-right {
+        box-shadow: 5px 5px 60px black;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+
+        div {
+            padding: 22px 20px;
+            background-color: #3B3B3B;
+            border-radius: 0 0 20px 20px;
+
+            h2 {
+                font-family: 'Work Sans';
+                color: $white-color;
+                font-size: 22px;
+                font-weight: 600;
+            }
+
+
+            div {
+                margin-top: 10px;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+
+                div {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+
+                    p {
+                        font-family: 'Work Sans';
+                        color: $white-color;
+                        font-size: 16px;
+                        font-weight: 400;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .schedule-media {
+        display: none;
+    }
+}
+
+@media (max-width: 1185px) {
+
+    .getSatrted-container {
+        padding: 20px 72px;
+
+        .getStarted-left {
+
+            h1 {
+                color: $white-color;
+                font-size: 38px;
+
+                p {
+                    font-size: 38px;
+                }
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+
+            .schedule {
+
+                div {
+                    width: 90px;
+
+                    h2 {
+                        font-size: 22px;
+                    }
+
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        .getStarted-right {
+            width: 330px;
+        }
+    }
+}
+
+@media(max-width: 900px) {
+    .getSatrted-container {
+        padding: 20px 30px;
+    }
+
+}
+
+@media (max-width: 770px) {
+    .getSatrted-container {
+        padding: 20px 30px;
+
+        .getStarted-left {
+            max-width: 330px;
+            width: 100%;
+        }
+
+
+        .getStarted-right {
+            max-width: 330px;
+            width: 100%;
+        }
+    }
+}
+
+
+@media (max-width: 750px) {
+
+    .getSatrted-container {
+        padding: 20px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        .getStarted-left {
+
+            h1 {
+                display: flex;
+                justify-content: start;
+                flex-wrap: wrap;
+                gap: 10px;
+                font-size: 28px;
+
+                p {
+                    font-size: 28px;
+                }
+
+                span {
+                    display: flex;
+                    flex-wrap: wrap;
+                    text-align: center;
+                }
+            }
+
+            .getStart {
+                display: none;
+            }
+
+
+            .schedule {
+                display: none;
+            }
+        }
+
+        .getStarted-right {
+            width: 315px;
+        }
+
+        .media-button {
+            max-width: 315px;
+            width: 100%;
+            padding: 16px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $purple-color;
+            border-radius: 20px;
+            border: 0;
+            gap: 10px;
+            cursor: pointer;
+
+            p {
+                font-family: 'Work Sans';
+                color: $white-color;
+                font-size: 16px;
+                font-weight: 600;
+            }
+        }
+
+        .schedule-media {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+
+            div {
+                width: 85px;
+
+                h2 {
+                    font-family: 'Space mono';
+                    color: $white-color;
+                    font-size: 22px;
+                    font-weight: 700;
+                }
+
+                p {
+                    font-family: 'Work Sans';
+                    color: $white-color;
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}

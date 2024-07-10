@@ -1,0 +1,406 @@
+@import '../../index.scss';
+
+.loading {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px;
+    gap: 35px;
+
+    p {
+        font-family: 'Space Mono';
+        font-size: 38px;
+        color: $white-color;
+        font-weight: 700;
+    }
+
+    img {
+        width: 100px;
+        height: 100px;
+        animation: rotate 2s linear infinite;
+        border-radius: 50%;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.emptyPageSearch {
+    margin: 40px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+
+    h2 {
+        text-align: center;
+        font-weight: 700;
+        font-size: 64px;
+        color: $white-color;
+        font-family: 'Work Sans';
+        text-shadow: 5xp 5px 50px $purple-color;
+    }
+
+    p {
+        text-align: center;
+        font-weight: 400;
+        font-size: 52px;
+        color: $white-color;
+        font-family: 'Space Mono';
+    }
+}
+
+.marketpalceModule-container {
+
+    .marketpalceModule-header {
+        padding: 80px 117px 0 117px;
+
+        h2 {
+            padding-bottom: 30px;
+            font-weight: 600;
+            font-size: 52px;
+            color: $white-color;
+            font-family: 'Work Sans';
+        }
+
+        p {
+            margin: 10px 0 30px;
+            font-weight: 400;
+            font-size: 22px;
+            color: $white-color;
+            font-family: 'Work Sans';
+        }
+    }
+
+    .input-container {
+        padding: 0 117px 50px 117px;
+        position: relative;
+        border-bottom: 1px solid $bg-grey;
+
+        input {
+            width: 100%;
+            padding: 10px 0 10px 15px;
+            border-radius: 20px;
+            border: 1px solid $bg-grey;
+            background-color: rgba(255, 255, 255, 0);
+            color: $white-color;
+            font-size: 28px;
+            font-family: 'Work Sans';
+            font-weight: 400;
+        }
+
+        img {
+            top: 15px;
+            right: 132px;
+            position: absolute;
+            cursor: pointer;
+        }
+    }
+
+
+    .marketplace-carts {
+        margin-top: 50px;
+        padding: 80px 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(315px, 330px));
+        justify-content: center;
+        gap: 30px;
+        background-color: $bg-grey;
+        position: relative;
+
+        .cart {
+            border-radius: 20px;
+            cursor: pointer;
+
+            .img-container {
+                height: 295px;
+
+                img {
+                    border-radius: 20px 20px 0 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .cartAbout {
+                border-radius: 0 0 20px 20px;
+                padding: 25px 30px;
+                background-color: $shief-bgc;
+
+                h2 {
+                    margin-bottom: 5px;
+                    font-weight: 600;
+                    font-family: 'Work Sans';
+                    color: $white-color;
+                    font-size: 22px;
+                }
+
+                .cartCreator {
+                    margin-bottom: 27px;
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+
+                    img {
+                        width: 24px;
+                        height: 24px;
+                    }
+
+                    h5 {
+                        font-family: 'Space Mono';
+                        font-size: 16px;
+                        color: $white-color;
+                        font-weight: 400;
+                    }
+                }
+
+                .price {
+                    display: flex;
+                    align-items: end;
+                    justify-content: space-between;
+
+                    div {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 8px;
+
+                        span {
+                            font-family: 'Space Mono';
+                            font-size: 12px;
+                            color: lighten($bg-grey, 20%);
+                            font-weight: 400;
+                        }
+
+                        p {
+                            font-family: 'Space Mono';
+                            font-size: 16px;
+                            color: $white-color;
+                            font-weight: 400;
+                        }
+                    }
+
+                    button {
+                        padding: 5px 10px;
+                        background-color: $purple-color;
+                        border-radius: 10px;
+                        border: 0;
+
+                        p {
+                            font-size: 16px;
+                            color: $white-color;
+                            font-weight: 400;
+                            font-family: 'Space Mono';
+                        }
+
+                        &:hover {
+                            box-shadow: 5px 5px 30px $purple-color;
+                        }
+                    }
+                }
+            }
+
+            &:hover {
+                box-shadow: 5px 5px 50px black;
+            }
+        }
+    }
+
+    .pagination {
+        padding: 20px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 35px;
+        background-color: $bg-grey;
+        border: 3px solid $shief-bgc;
+
+        button {
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            background-color: $purple-color;
+            cursor: pointer;
+            border-radius: 10px;
+            border: 3px solid $white-color;
+            box-shadow: 5px 5px 20px $shief-bgc;
+
+            &:hover {
+                box-shadow: 5px 5px 50px $purple-color;
+            }
+        }
+
+        button.none {
+            display: none;
+        }
+
+        span {
+            padding: 10px 20px;
+            background-color: $purple-color;
+            font-family: 'Space Mono';
+            font-size: 16px;
+            color: $white-color;
+            font-weight: 400;
+            border-radius: 10px;
+        }
+    }
+    .pagination.none {
+        display: none;
+    }
+
+}
+
+
+@media(max-width: 1170px) {
+    .marketpalceModule-container {
+
+        .marketpalceModule-header {
+            padding: 80px 80px 0 80px;
+        }
+
+        .input-container {
+            padding: 0 80px 50px 80px;
+        }
+
+
+        .marketplace-carts {
+            padding: 40px 30px;
+            grid-template-columns: repeat(auto-fit, max(315px));
+
+            .cart {
+
+                .img-container {
+
+                    img {
+                        height: 100%;
+                        width: 315px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media(max-width: 835px) {
+    .emptyPageSearch {
+    
+        h2 {
+            font-size: 48px;
+        }
+    
+        p {
+            font-size: 32px;
+        }
+    }
+    .marketpalceModule-container {
+
+        .marketpalceModule-header {
+            padding: 40px 40px 0 40px;
+
+            h2 {
+                font-size: 38px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+
+        .input-container {
+            padding: 0 40px 30px 40px;
+
+            img {
+                right: 55px;
+            }
+        }
+
+
+        .emptyPageSearch {
+
+            h2 {
+                font-size: 38px;
+            }
+
+            p {
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+
+@media(max-width: 535px) {
+
+    .emptyPageSearch {
+    
+        h2 {
+            font-size: 28px;
+        }
+    
+        p {
+            font-size: 16px;
+        }
+    }
+    .marketpalceModule-container {
+
+        .marketpalceModule-header {
+            padding: 30px 30px 0 30px;
+
+            h2 {
+                font-size: 28px;
+            }
+
+            p {
+                margin: 10px 0;
+                font-size: 16px;
+                font-weight: 400;
+            }
+        }
+
+        .input-container {
+            padding: 0 30px 30px 30px;
+
+            img {
+                right: 45px;
+            }
+
+            input {
+                font-size: 16px;
+            }
+        }
+
+        
+    .pagination {
+        padding: 20px;
+        gap: 20px;
+        flex-wrap: wrap;
+
+        button {
+            padding: 5px 10px;
+            border-radius: 10px;
+        }
+
+        button.none {
+            display: none;
+        }
+
+        span {
+            padding: 5px 10px;
+            font-size: 12px;
+            border-radius: 5px;
+        }
+    }
+    }
+}

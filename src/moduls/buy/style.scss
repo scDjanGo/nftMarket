@@ -1,0 +1,120 @@
+@import '../../index.scss';
+
+
+.buy-container {
+
+
+    .buy {
+        width: 100%;
+        height: 100vh;
+        background: url(../../../public/userAbout/backImg.png) center no-repeat;
+        background-size: cover;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        a {
+            position: absolute;
+            left: 55px;
+            top: 20px;
+            border-radius: 10px;
+            font-size: 32px;
+            color: $white-color;
+            font-weight: 700;
+            font-family: 'Work Sans';
+            padding: 5px 20px;
+            border: 3px solid $white-color;
+            background-color: rgba(255, 255, 255, .2);
+            cursor: pointer;
+
+            &:hover {
+                box-shadow: 5px 5px 50px $white-color;
+                color: $purple-color;
+                background-color: $white-color;
+            }
+        }
+
+        .nft {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 35px;
+
+            .img {
+                transform: translateY(20px);
+                margin: 20px 40px;
+
+                img {
+                    max-width: 330px;
+                    width: 100%;
+                    border-radius: 40px;
+                }
+            }
+
+            h2 {
+                font-size: 64px;
+                color: $white-color;
+                font-weight: 700;
+                font-family: 'Work Sans';
+            }
+
+            .description {
+                padding: 0 20px;
+                font-size: 18px;
+                color: $white-color;
+                font-weight: 400;
+                font-family: 'Work Sans';
+                text-align: center;
+            }
+
+            button {
+                padding: 1.1em 2em;
+                background: none;
+                border: 2px solid #fff;
+                font-size: 24px;
+                font-family: 'Work Sans';
+                color: $white-color;
+                cursor: pointer;
+                position: relative;
+                overflow: hidden;
+                transition: all 0.3s;
+                border-radius: 12px;
+                background-color: $purple-color;
+                font-weight: bolder;
+                box-shadow: 0 2px 0 2px black;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    width: 100px;
+                    height: 120%;
+                    background-color: #ff6700;
+                    top: 50%;
+                    transform: skewX(30deg) translate(-150%, -50%);
+                    transition: all 0.5s;
+                }
+
+                &:hover {
+                    background-color: #4cc9f0;
+                    color: #fff;
+                    box-shadow: 0 2px 0 2px #0d3b66;
+                }
+
+                &:hover::before {
+                    transform: skewX(30deg) translate(300%, -50%);
+                    transition-delay: 0.1s;
+                }
+
+                &:active {
+                    transform: scale(0.9);
+                }
+            }
+
+        }
+    }
+}

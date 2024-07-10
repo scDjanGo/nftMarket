@@ -1,0 +1,338 @@
+@import '../../index.scss';
+
+
+.enterEmail-container {
+    * {
+        transition: all .3s ease-in-out;
+    }
+    padding: 80px 107px;
+    align-content: center;
+
+    .enterEmail {
+        border-radius: 20px;
+        background-color: $bg-grey;
+        padding: 60px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .email-container {
+            display: flex;
+            align-items: start;
+            flex-direction: column;
+
+            h2 {
+                font-family: 'Work Sans';
+                font-weight: 600;
+                font-size: 38px;
+                color: $white-color;
+            }
+
+            p {
+                margin: 10px 0 50px 0;
+                font-family: 'Work Sans';
+                font-weight: 400;
+                font-size: 22px;
+                color: $white-color;
+            }
+
+            form {
+                max-width: 420px;
+                width: 100%;
+                position: relative;
+
+                input {
+                    max-width: 420px;
+                    width: 100%;
+                    border-radius: 20px;
+                    padding: 16px 20px;
+                    font-family: 'Work Sans';
+                    font-weight: 400;
+                    font-size: 16px;
+                    border: 0;
+                }
+
+                button {
+                    padding: 11.3px 45px;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    flex-direction: row;
+                    background-color: $purple-color;
+                    border: 0;
+                    border-radius: 20px;
+                    right: 0;
+                    top: 0;
+                    position: absolute;
+
+                    p {
+                        margin: 0;
+                        font-family: 'Work Sans';
+                        font-weight: 600;
+                        font-size: 16px;
+                        color: $white-color;
+                    }
+
+                    div {
+                        padding-top: 5px;
+
+                        img {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+
+                    &:hover {
+                        box-shadow: 5px 5px 50px $purple-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .enterEmail-container {
+        padding: 40px 70px;
+
+        .enterEmail {
+            padding: 40px;
+
+            img {
+                max-width: 410px;
+                max-width: 100%;
+                max-height: 310px;
+                height: 100%;
+            }
+
+            .email-container {
+
+
+                form {
+                    max-width: 420px;
+                    width: 100%;
+                    position: relative;
+
+                    input {
+                        max-width: 420px;
+                        width: 100%;
+                        border-radius: 20px;
+                        padding: 16px 20px;
+                        font-family: 'Work Sans';
+                        font-weight: 400;
+                        font-size: 16px;
+                        border: 0;
+                    }
+
+                    button {
+                        padding: 11.3px 45px;
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        flex-direction: row;
+                        background-color: $purple-color;
+                        border: 0;
+                        border-radius: 20px;
+                        right: 0;
+                        top: 0;
+                        position: absolute;
+
+                        p {
+                            margin: 0;
+                            font-family: 'Work Sans';
+                            font-weight: 600;
+                            font-size: 16px;
+                            color: $white-color;
+                        }
+
+                        div {
+                            padding-top: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 1080px) {
+    .enterEmail-container {
+        padding: 40px 70px;
+
+        .enterEmail {
+            padding: 40px;
+
+            img {
+                width: 410px;
+                height: 310px;
+            }
+
+            .email-container {
+
+                h2 {
+                    font-size: 28px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+
+                form {
+                    max-width: 420px;
+                    width: 100%;
+                    position: relative;
+
+                    input {
+                        margin-bottom: 20px;
+                    }
+
+                    button {
+                        width: 100%;
+                        position: relative;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 900px) {
+    .enterEmail-container {
+        padding: 20px 35px;
+
+        .enterEmail {
+            padding: 40px;
+
+            img {
+                max-width: 310px;
+                width: 100%;
+            }
+
+            .email-container {
+
+                h2 {
+                    font-size: 28px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+
+                form {
+                    max-width: 420px;
+                    width: 100%;
+                    position: relative;
+
+                    input {
+                        margin-bottom: 20px;
+                    }
+
+                    button {
+                        width: 100%;
+                        position: relative;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 780px) {
+    .enterEmail-container {
+        padding: 20px 35px;
+
+        .enterEmail {
+            padding: 40px;
+
+            img {
+                max-width: 250px;
+                width: 100%;
+                max-height: 190px;
+                height: 100%;
+            }
+
+            .email-container {
+
+                h2 {
+                    font-size: 28px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+
+                form {
+                    max-width: 420px;
+                    width: 100%;
+                    position: relative;
+
+                    input {
+                        margin-bottom: 20px;
+                    }
+
+                    button {
+                        width: 100%;
+                        position: relative;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 710px) {
+    .enterEmail-container {
+        padding: 20px 10px;
+
+        .enterEmail {
+            padding: 40px;
+            gap: 15px;
+            flex-direction: column;
+
+            img {
+                max-width: 250px;
+                width: 100%;
+                max-height: 190px;
+                height: 100%;
+            }
+
+            .email-container {
+
+                h2 {
+                    font-size: 28px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+
+                form {
+                    max-width: 420px;
+                    width: 100%;
+                    position: relative;
+
+                    input {
+                        margin-bottom: 20px;
+                    }
+
+                    button {
+                        width: 100%;
+                        position: relative;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+}

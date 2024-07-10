@@ -1,0 +1,161 @@
+@import '../../index.scss';
+
+
+.wallet-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 35px;
+    flex-direction: column;
+
+    .on {
+        display: block;
+        color: red;
+    }
+
+    .modal-binance,
+    .modal-mbank {
+        transform: translateY(-100%) scale(0);
+        height: 0;
+
+        .form {
+            margin: 0 20px;
+            border-radius: 20px;
+            padding: 50px 20px 30px 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 550px));
+            gap: 25px;
+            background-color: $purple-color;
+            position: relative;
+
+            div {
+                width: 30px;
+                height: 30px;
+                display: flex;
+                position: absolute;
+                top: 10px;
+                right: 20px;
+                border-radius: 5px;
+                background-color: $purple-color;
+                cursor: pointer;
+                border: 3px solid $white-color;
+
+                p {
+                    color: $white-color;
+                    font-size: 20px;
+                    font-weight: 700;
+                }
+
+                p:last-child {
+                    transform: rotate(45deg) translateY(-5px) translateX(4px);
+                }
+
+                p:first-child {
+                    transform: rotate(-45deg) translateY(7px) translateX(8px);
+                }
+
+                &:hover {
+                    box-shadow: 5px 5px 50px $white-color;
+                }
+            }
+
+            input {
+                padding: 5px 10px;
+                border-radius:10px;
+                font-size: 24px;
+                border: 0;
+
+                &:focus {
+                    outline: 0;
+                }
+            }
+
+            span {
+                display: flex;
+                justify-content: center;
+
+                button {
+                    padding: 5px 10px;
+                    border-radius: 20px;
+                    font-size: 24px;
+                    border: 3px solid $white-color;
+                    background-color: $purple-color;
+                    color: $white-color;
+                    width: 200px;
+
+                    &:hover {
+                        box-shadow: 5px 5px 50px $white-color;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .modal-binance.show {
+        transform: translateY(50px) scale(1);
+        height: auto;
+        width: auto;
+    }
+
+    .modal-mbank.show {
+        transform: translateY(50px) scale(1);
+        height: auto;
+        width: auto;
+    }
+
+    a {
+        width: 600px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 25px;
+        background-color: $purple-color;
+        border-radius: 20px;
+        color: $white-color;
+        font-weight: 700;
+        font-size: 42px;
+        font-family: 'Work Sans';
+        cursor: pointer;
+        transform: translateY(0) scale(1);
+
+        &:hover {
+            box-shadow: 5px 5px 50px $purple-color;
+        }
+    }
+
+    a.none {
+        transform: translateY(100%) scale(0);
+    }
+}
+
+@media(max-width: 785px) {
+
+    .wallet-container {
+
+        a {
+            width: 400px;
+            font-size: 32px;
+        }
+    }
+}
+
+
+@media(max-width: 500px) {
+
+    .wallet-container {
+
+        a {
+            max-width: 300px;
+            font-size: 24px;
+
+            img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+}

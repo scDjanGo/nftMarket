@@ -1,0 +1,378 @@
+@import '../../index.scss';
+
+
+.myWallet-container {
+    background-image: url(../../../public/userAbout/backImg.png );
+    background-size: cover;
+    height: 90vh;
+    position: relative;
+
+    .replenish {
+        position: absolute;
+        z-index: 21;
+        width: 100%;
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 200px;
+        background-color: rgba(255, 255, 255, .5);
+        backdrop-filter: blur(20px);
+        transform: translateY(-100%) scale(0);
+
+        form {
+            padding: 50px 20px 20px 20px;
+            max-width: 600px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 35px;
+            border: 3px solid $purple-color;
+            background: $white-color;
+            border-radius: 20px;
+            position: relative;
+
+            img {
+                position: absolute;
+                left: 20px;
+                top: 5px;
+                cursor: pointer;
+
+                &:hover {
+                    top: 3px;
+                }
+            }
+
+
+            input {
+                padding: 10px 20px;
+                width: 100%;
+                border-radius: 10px;
+                border: 3px solid $purple-color;
+                font-family: 'Work Sans';
+                font-weight: 700;
+                font-size: 26px;
+                box-shadow: 5px 5px 30px black;
+
+                &:focus {
+                    outline: none;
+                }
+
+                &:hover {
+                    transform: translateY(-3px);
+                }
+            }
+
+            button {
+                padding: 10px 20px;
+                background: none;
+                border: 2px solid #fff;
+                font-size: 16px;
+                font-family: 'Work Sans';
+                color: $white-color;
+                cursor: pointer;
+                position: relative;
+                overflow: hidden;
+                transition: all 0.3s;
+                border-radius: 12px;
+                background-color: $purple-color;
+                font-weight: bolder;
+                box-shadow: 0 2px 0 2px black;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    width: 100px;
+                    height: 120%;
+                    background-color: #ff6700;
+                    top: 50%;
+                    transform: skewX(30deg) translate(-150%, -50%);
+                    transition: all 0.5s;
+                }
+
+                &:hover {
+                    background-color: #4cc9f0;
+                    color: #fff;
+                    box-shadow: 0 2px 0 2px #0d3b66;
+                    transform: translateY(-3px);
+                }
+
+                &:hover::before {
+                    transform: skewX(30deg) translate(300%, -50%);
+                    transition-delay: 0.1s;
+                }
+
+                &:active {
+                    transform: scale(0.9);
+                }
+            }
+        }
+    }
+
+    .replenish.on {
+        transform: translateY(0) scale(1);
+    }
+
+    .wallet-about {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(10px);
+        position: relative;
+
+        .choose-wallet {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            padding: 10px 20px;
+            border: 3px solid $white-color;
+            border-radius: 10px;
+            font-size: 24px;
+            color: $white-color;
+            font-weight: 500;
+            font-family: 'Work Sans';
+            cursor: pointer;
+
+            &:hover {
+                background-color: $white-color;
+                color: $purple-color;
+                box-shadow: 5px 5px 50px $white-color;
+            }
+        }
+
+        .content {
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 35px;
+
+
+            h2 {
+                font-size: 32px;
+                font-weight: 700;
+                color: $white-color;
+                font-family: 'Work Sans';
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                
+
+                img {
+                    width: 48px;
+                    height: 48px;
+                }
+            }
+
+            img {
+                max-width: 250px;
+                width: 100%;
+                border-radius: 20px;
+            }
+
+            .names {
+                display: flex;
+                align-items: center;
+                gap: 35px;
+                font-family: 'Work Sans';
+                color: $white-color;
+                font-weight: 700;
+                font-size: 42px;
+            }
+
+            .email {
+                font-family: 'Work Sans';
+                color: $white-color;
+                font-weight: 700;
+                font-size: 24px;
+            }
+
+            .number {
+                font-family: 'Work Sans';
+                color: $white-color;
+                font-weight: 700;
+                font-size: 24px;
+            }
+
+            .cash {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                h3 {
+                    font-family: 'Work Sans';
+                    color: $white-color;
+                    font-weight: 700;
+                    font-size: 24px;
+                }
+
+                button {
+                    padding: 10px 20px;
+                    background: none;
+                    border: 2px solid #fff;
+                    font-size: 16px;
+                    font-family: 'Work Sans';
+                    color: $white-color;
+                    cursor: pointer;
+                    position: relative;
+                    overflow: hidden;
+                    transition: all 0.3s;
+                    border-radius: 12px;
+                    background-color: $purple-color;
+                    font-weight: bolder;
+                    box-shadow: 0 2px 0 2px black;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        width: 100px;
+                        height: 120%;
+                        background-color: #ff6700;
+                        top: 50%;
+                        transform: skewX(30deg) translate(-150%, -50%);
+                        transition: all 0.5s;
+                    }
+
+                    &:hover {
+                        background-color: #4cc9f0;
+                        color: #fff;
+                        box-shadow: 0 2px 0 2px #0d3b66;
+                        transform: translateY(-3px);
+                    }
+
+                    &:hover::before {
+                        transform: skewX(30deg) translate(300%, -50%);
+                        transition-delay: 0.1s;
+                    }
+
+                    &:active {
+                        transform: scale(0.9);
+                    }
+
+                    img {
+                        border-radius: 0;
+                        width: 24px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 900px) {
+
+    .myWallet-container {
+
+        .wallet-about {
+            flex-direction: column;
+
+            .choose-wallet {
+                top: 5px;
+                left: 0;
+                position: relative;
+                padding: 5px 10px;
+                border: 2px solid $white-color;
+                border-radius: 10px;
+                font-size: 18px;
+                font-weight: 400;
+            }
+
+            .content {
+                padding: 10px 40px;
+            }
+        }
+    }
+}
+
+@media(max-width: 700px) {
+
+    .myWallet-container {
+
+        .replenish {
+            padding: 20px;
+
+            form {
+                flex-direction: column;
+                input {
+                    max-width: 400px;
+                    width: 100%;
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .replenish.on {
+            transform: translateY(0) scale(1);
+        }
+    }
+}
+
+@media(max-width: 560px) {
+    .myWallet-container {
+
+        .wallet-about {
+
+            .choose-wallet {
+                top: -5px;
+
+                &:hover {
+                    background-color: $white-color;
+                    color: $purple-color;
+                    box-shadow: 5px 5px 50px $white-color;
+                }
+
+            }
+
+            .content {
+                padding: 20px;
+
+                img {
+                    max-width: 150px;
+                }
+
+                .names {
+                    flex-direction: column;
+                    gap: 30px;
+                    font-size: 18px;
+                }
+
+                .email {
+                    text-align: center;
+                    font-size: 18px;
+                }
+
+                .number {
+                    font-size: 20px;
+                }
+
+                .cash {
+                    flex-direction: column;
+
+                    h3 {
+                        font-size: 24px;
+                    }
+
+                    button {
+                        padding: 10px 20px;
+                        font-weight: 600;
+                        font-size: 18px;
+                        border-radius: 16px;
+
+                        &:hover {
+                            box-shadow: 5px 5px 50px black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,323 @@
+@import '../../index.scss';
+
+.ranking-container {
+    padding: 80px 117px;
+
+    .ranking-header {
+        h2 {
+            font-weight: 600;
+            font-size: 52px;
+            color: $white-color;
+            font-family: 'Work Sans';
+        }
+
+        p {
+            margin: 20px 0 80px;
+            font-weight: 400;
+            font-size: 22px;
+            color: $white-color;
+            font-family: 'Work Sans';
+        }
+    }
+
+    .tag-names {
+        margin: 40px 0 20px;
+        padding: 12px 40px;
+        border: 1px solid #858584;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        div {
+            max-width: 360px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        p {
+            font-family: 'Space Mono';
+            font-weight: 400;
+            font-size: 16px;
+            color: #858584;
+
+            span {
+                margin-right: 30px;
+            }
+        }
+    }
+
+    .sRanking-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .user {
+            padding: 12px 20px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: $bg-grey;
+
+            .userInfo {
+                display: flex;
+                align-items: center;
+
+                .number {
+                    width: 30px;
+                    height: 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 20px;
+                    background-color: $shief-bgc;
+
+                    font-family: 'Space Mono';
+                    font-size: 16px;
+                    color: #858584;
+                    font-weight: 400;
+                }
+
+                img {
+                    margin: 0 12px 0 20px;
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                }
+
+
+                h2 {
+                    font-family: 'Work Sans';
+                    font-weight: 600;
+                    font-size: 22px;
+                    color: $white-color;
+                }
+            }
+
+            .static {
+                max-width: 380px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-left: calc(200px + (280 * ((40vw - 600px) / 800)));
+
+                .change {
+                    font-family: 'Space Mono';
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #00AC4F;
+                }
+
+                .sold {
+                    font-family: 'Space Mono';
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: $white-color;
+                }
+
+                .volume {
+                    font-family: 'Space Mono';
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: $white-color;
+                }
+            }
+
+        }
+    }
+}
+
+@media(max-width: 1240px) {
+    .ranking-container {
+        padding: 80px 30px;
+
+        .tag-names {
+
+            div {
+                max-width: 260px;
+            }
+        }
+
+        .sRanking-container {
+
+            .user {
+
+                .static {
+                    max-width: 280px;
+                    margin-left: calc(50px + (280 * ((50vw - 600px) / 800)));
+                }
+
+            }
+        }
+    }
+}
+
+@media(max-width: 835px) {
+
+    .ranking-container {
+
+        .tag-names {
+
+            div {
+                max-width: 180px;
+
+                p:nth-child(1) {
+                    display: none;
+                }
+            }
+        }
+
+        .sRanking-container {
+
+            .user {
+
+                .userInfo {
+
+                    .number {
+                        width: 24px;
+                        height: 24px;
+                    }
+
+                    img {
+                        margin: 0 10px 0 12px;
+                        width: 24px;
+                        height: 24px;
+                    }
+
+                    h2 {
+                        font-size: 22px;
+                    }
+                }
+
+                .static {
+                    max-width: 200px;
+                    width: 100%;
+                    margin-left: calc(50px + (280 * ((50vw - 600px) / 800)));
+
+                    .sold {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media(max-width: 690px) {
+
+    .ranking-container {
+
+
+        .tag-names {
+
+            div {
+                max-width: 80px;
+
+                p:nth-child(1) {
+                    display: none;
+                }
+            }
+        }
+
+        .sRanking-container {
+
+            .user {
+
+                .userInfo {
+
+                    .number {
+                        width: 24px;
+                        height: 24px;
+                        background-color: $bg-grey;
+                    }
+
+                    img {
+                        margin: 0 10px 0 12px;
+                        width: 24px;
+                        height: 24px;
+                    }
+
+                    h2 {
+                        font-size: 22px;
+                    }
+                }
+
+                .static {
+                    max-width: 100px;
+
+                    .change {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media(max-width: 570px) {
+
+    .ranking-container {
+
+        .ranking-header {
+            h2 {
+                font-size: 38px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+
+        .tag-names {
+
+            div {
+                max-width: 50px;
+            }
+        }
+
+        .sRanking-container {
+
+            .user {
+                padding: 4px 10px;
+
+                .userInfo {
+
+                    .number {
+                        width: 24px;
+                        height: 24px;
+                    }
+
+                    img {
+                        margin: 0 10px 0 6px;
+                    }
+
+                    h2 {
+                        max-width: 200px;
+                        width: 100%;
+                        font-weight: 400;
+                        font-size: 16px;
+                    }
+                }
+
+                .static {
+                    max-width: 80px;
+
+                    .change {
+                        display: none;
+                    }
+
+                    .volume {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
