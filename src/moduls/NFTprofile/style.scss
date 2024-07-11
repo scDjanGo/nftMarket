@@ -75,6 +75,27 @@
                         }
                     }
 
+                    div {
+                        width: 100%;
+                        
+                        select {
+                            padding: 5px 10px;
+                            border-radius: 15px;
+                            background-color: $white-color;
+                            padding-left: 10px;
+                            width: 200px;
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+    
+                            font-size: 20px;
+                            font-weight: 400;
+                            font-family: 'Work Sans';
+                            border: none;
+                        }
+                    }
+
+
                     button {
                         padding: 10px 20px;
                         border-radius: 20px;
@@ -295,6 +316,7 @@
                 gap: 10px;
 
                 img {
+                    border-radius: 50%;
                     width: 24px;
                     height: 24px;
                 }
@@ -728,6 +750,7 @@
 
 
 @media(max-width: 655px) {
+
     .nftProfile-container {
 
         .discription {
@@ -825,6 +848,29 @@
                     }
                 }
             }
+
+            .media-button {
+                padding: 19px 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 12px;
+                border-radius: 20px;
+                background-color: rgba(255, 255, 255, 0);
+                border: 3px solid $purple-color;
+                cursor: pointer;
+
+                p {
+                    font-weight: 600;
+                    font-size: 16px;
+                    color: $white-color;
+                    font-family: 'Work Sans';
+                }
+
+                &:hover {
+                    box-shadow: 5px 5px 50px $purple-color;
+                }
+            }
         }
 
         .nfts {
@@ -842,9 +888,5 @@
             }
         }
 
-
-        .media-button {
-            display: flex;
-        }
     }
 }

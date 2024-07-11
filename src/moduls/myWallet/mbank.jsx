@@ -78,7 +78,7 @@ function Mbank() {
                     <div className={`replenish ${replenish ? 'on' : ''}`} onClick={(e) => setReplenish(prev => !prev)}>
                         <form onClick={(e) => e.stopPropagation()} onSubmit={(e) => toReplenish(e)}>
                             <img className='close' src="/header-items/exit.svg" alt="exit" onClick={(e) => setReplenish(prev => !prev)} />
-                            <input name='money' min={0.01} type="number" placeholder='Amount to fill in ETH' required step="any" />
+                            <input name='money' min={0.01}max={+me.mbank.price - 1} type="number" placeholder='Amount to fill in ETH' required step="any" />
                             <button>Transfer money</button>
                         </form>
                     </div>
@@ -92,7 +92,7 @@ function Mbank() {
                                 <p className='email'>{me.email}</p>
                                 <p className='number'>{me.phone}</p>
                                 <div className='cash'>
-                                    <h3>{me.mbank.price} ETH</h3>
+                                    <h3>{+me.mbank.price - 1} ETH</h3>
                                     <button onClick={(e) => setReplenish(prev => !prev)}>Replenish balance<img src="/wallet/cash.svg" alt="cash" /></button>
                                 </div>
                             </div>

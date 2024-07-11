@@ -57,7 +57,7 @@ function UserAbout() {
                                 Bio
                             </p>
                             <p className='comment'>
-                                The internet's friendliest designer kid.
+                                {user.bio}
                             </p>
                         </div>
                     </div>
@@ -72,28 +72,28 @@ function UserAbout() {
                         <div className='userCreated-container'>
 
                             {userNfts.map((cart, index) => (
-                            <Link to={`/nftProfile/${cart.token}`} key={index} className="cart">
-                                <div className='img-container'>
-                                    <img src={cart.image} alt="img" />
-                                </div>
-                                <div className="cartAbout">
-                                    <h2>{cart.name}</h2>
-                                    <div className='cartCreator'>
-                                        <img src={cart.user.avatar} alt="avatar" />
-                                        <h5>{ }</h5>
+                                <Link to={`/nftProfile/${cart.token}`} key={index} className="cart">
+                                    <div className='img-container'>
+                                        <img src={cart.image} alt="img" />
                                     </div>
-                                    <div className='price'>
-                                        <div>
-                                            <span>Price</span>
-                                            <p>{cart.price} ETH</p>
+                                    <div className="cartAbout">
+                                        <h2>{cart.name}</h2>
+                                        <div className='cartCreator'>
+                                            <img src={cart.user.avatar} alt="avatar" />
+                                            <h5>{cart.user.first_name }</h5>
                                         </div>
+                                        <div className='price'>
+                                            <div>
+                                                <span>Price</span>
+                                                <p>{cart.price} ETH</p>
+                                            </div>
 
-                                        <button>
-                                            <p>Detailed View</p>
-                                        </button>
+                                            <button>
+                                                <p>Detailed View</p>
+                                            </button>
+                                        </div>
                                     </div>
-                                </div>
-                            </Link>
+                                </Link>
                             ))}
                         </div>
                     ) : (

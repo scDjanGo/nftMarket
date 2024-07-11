@@ -78,6 +78,7 @@ function NftProfile() {
         for (let [key, value] of form) {
             formEdit[key] = value;
         }
+        console.log(formEdit);
 
         let user = localStorage.getItem('myAccaunt')
         if (!user) return
@@ -120,16 +121,16 @@ function NftProfile() {
         }).then(res => {
             document.getElementById('toMyProdile')
                 .click()
-                setTimeout(() => {
-                    const cashId = document.getElementById('cashId')
-                    cashId.lastElementChild.innerHTML = `NFT has been removed`
-                    cashId.classList.add('on')
-                }, 500)
+            setTimeout(() => {
+                const cashId = document.getElementById('cashId')
+                cashId.lastElementChild.innerHTML = `NFT has been removed`
+                cashId.classList.add('on')
+            }, 500)
 
-                setTimeout(() => {
-                    const cashId = document.getElementById('cashId')
-                    cashId.classList.remove('on')
-                }, 3000)
+            setTimeout(() => {
+                const cashId = document.getElementById('cashId')
+                cashId.classList.remove('on')
+            }, 3000)
         })
             .catch(err => console.error(err))
     }
@@ -157,6 +158,13 @@ function NftProfile() {
                                             <input name='price' type="text" placeholder='New NFT price' value={editNft.price} onChange={handleChange} required />
                                             <p>Description</p>
                                             <input name='description' type="text" placeholder='New NFT description' value={editNft.description} onChange={handleChange} />
+                                            <p>Release for sale</p>
+                                            <div>
+                                                <select name="buy_or_not" id="by_or_not">
+                                                    <option value={true}>Yes</option>
+                                                    <option value={false}>No</option>
+                                                </select>
+                                            </div>
                                             <button>
                                                 Edit
                                             </button>
@@ -195,9 +203,17 @@ function NftProfile() {
                                     <p>Minted on {minted}</p>
                                 </div>
 
-                                <Link to={myAccaunt ? `/buy/${nft.token}` : '/createAccount'} className={`buy-nft ${ifMe ? '' : 'notMe'}`}>
-                                    <button>Buy: {nft.price} ETH</button>
-                                </Link>
+                                {nft.buy_or_not ?
+                                    <Link to={myAccaunt ? `/buy/${nft.token}` : '/createAccount'} className={`buy-nft ${ifMe ? '' : 'notMe'}`}>
+                                        <button>Buy: {nft.price} ETH</button>
+                                    </Link>
+                                    :
+                                    <div className={`buy-nft ${ifMe ? '' : 'notMe'}`}>
+                                        <button>Not for sale</button>
+                                    </div>
+                                }
+
+
 
                                 <div className={`buy-nft ${ifMe ? 'notMe' : ''}`}>
                                     <button onClick={(e) => { setEditButton(prev => !prev) }}>Edit NFT</button>
@@ -207,7 +223,7 @@ function NftProfile() {
                                 <div className='creator'>
                                     <p>Created By</p>
                                     <div>
-                                        <img src="/nftProfile/avatar.png" alt="avatar" />
+                                        <img src={nft.user.avatar} alt="avatar" />
                                         <p>{nft.user.first_name}</p>
                                     </div>
                                 </div>
