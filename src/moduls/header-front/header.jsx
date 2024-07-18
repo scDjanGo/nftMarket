@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { useWas } from '../dataContext/dataContext'
 
 function Header() {
+    
     const [openMenu, setOpenMenu] = useState(false);
     const [hWas, setHWas] = useState(null);
     const [walletType, setWalletType] = useState(null)
@@ -46,7 +47,7 @@ function Header() {
     return (
         <div className='header-container'>
             <Link to={`/`}>
-                <div className={`zag ${openMenu ? 'active' : ''}`} id='toHome'>
+                <div className={`zag`} id='toHome'>
                     <div>
                         <img src="/header-items/Storefront.png" alt="StoreFront" />
                         <img src="/header-items/home.svg" alt="home" />
@@ -73,38 +74,33 @@ function Header() {
                 }
             </div>
 
-            <div className='burger-menu'>
-                <div className={`poloski ${openMenu ? 'active' : ''}`} onClick={() => setOpenMenu(prev => !prev)}>
+            <div className={`burger-menu ${openMenu ? 'active' : ''}`} onClick={(e) => {setOpenMenu(prev => !prev)}}>
+                <div className={`poloski`}>
                     <div></div>
                     <div></div>
                     <div></div>
                 </div>
-                <div className={`exit ${openMenu ? 'active' : ''}`} onClick={() => setOpenMenu(prev => !prev)}>
-                    <div className='close-button'>
-                        <div className="left">|</div>
-                        <div className="right">|</div>
-                    </div>
-                    <div className='r-m'>
-                        <Link to={'marketplace'}>Marketplace</Link>
-                        <Link to={'ranking'}>Rankings</Link>
-                    </div>
 
-                    <div className='sign-UI'>
+                    <div className='sign-UI' onClick={(e) => e.stopPropagation()}>
+
+                        
+                        <Link onClick={(e) => {setOpenMenu(prev => !prev)}} to={'/'}>Home</Link>
+                        <Link onClick={(e) => {setOpenMenu(prev => !prev)}} to={'marketplace'}>Marketplace</Link>
+                        <Link onClick={(e) => {setOpenMenu(prev => !prev)}} to={'ranking'}>Rankings</Link>
 
                         {
                             (was || hWas) ?
                                 <>
-                                    <Link to={toPath}>Wallet</Link>
-                                    <Link to={`myProfile`}>Profile</Link>
+                                    <Link onClick={(e) => {setOpenMenu(prev => !prev)}} to={toPath}>Wallet</Link>
+                                    <Link onClick={(e) => {setOpenMenu(prev => !prev)}} to={`myProfile`}>Profile</Link>
                                 </>
                                 :
                                 <>
-                                    <Link to={`createAccount`}>Sign Up</Link>
-                                    <Link to={`signIn`}>Sign In</Link>
+                                    <Link onClick={(e) => {setOpenMenu(prev => !prev)}} to={`createAccount`}>Sign Up</Link>
+                                    <Link onClick={(e) => {setOpenMenu(prev => !prev)}} to={`signIn`}>Sign In</Link>
                                 </>
                         }
                     </div>
-                </div>
             </div>
         </div >
     );

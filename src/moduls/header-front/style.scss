@@ -7,7 +7,7 @@
 
     padding: 20px 105px;
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: space-between;
 
     .zag {
@@ -92,6 +92,7 @@
         }
     }
 
+    
     .burger-menu {
         display: none;
     }
@@ -113,139 +114,108 @@
             display: none !important;
         }
 
+
         .burger-menu {
-            display: flex !important;
-            align-items: center;
-            transform: translateY(-5px);
+            width: 50px;
+            display: flex;
+
 
             .poloski {
+                top: 25px;
                 display: flex;
-                justify-content: start;
+                align-items: center;
+                justify-content: center;
                 flex-direction: column;
-                gap: 5px;
+                gap: 6px;
                 cursor: pointer;
-                transition: all .3s ease-in-out;
-                transform: translateX(0) translateY(7px) scale(1);
+                position: absolute;
+                top: 25px;
+                right: 20px;
+                z-index: 51;
 
-                div:nth-child(1) {
-                    width: 18px;
-                    border-bottom: 3px solid $white-color;
-                }
-
-                div:nth-child(2) {
-                    width: 24px;
-                    border-bottom: 3px solid $white-color;
-                }
-
-                div:nth-child(3) {
-                    width: 18px;
-                    border-bottom: 3px solid $white-color;
-                }
-
-                &.active {
-                    transform: translateX(-100%) scale(0);
-                }
-
-
-                &:hover {
-                    filter: drop-shadow(5px 5px 20px $white-color);
+                div {
+                    height: 3px;
+                    width: 30px;
+                    background-color: white;
                 }
             }
 
-            .exit {
+            .sign-UI {
+                transform: translateY(-100%) scale(0);
+            }
+        }
+
+        .burger-menu.active {
+            height: 100vh;
+            right: 0;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            position: fixed;
+            gap: 25px;
+            width: 100%;
+            z-index: 59;
+            background-color: rgba(43, 43, 43, 0.2);
+
+
+            .poloski {
+                top: 25px;
                 display: flex;
-                position: relative;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: 6px;
                 cursor: pointer;
-                transition: all .3s ease-in-out;
-                transform: translateX(100%) scale(0);
-                max-width: 0;
+                position: absolute;
+                top: 25px;
+                right: 20px;
+                z-index: 51;
 
-                .close-button {
-
-
-                    .left {
-                        color: $white-color;
-                        font-weight: 700;
-                        transform: rotate(45deg);
-                        font-size: 28px;
-                        position: absolute;
-                        left: 3px;
-                    }
-
-                    .right {
-                        color: $white-color;
-                        font-weight: 700;
-                        transform: rotate(-45deg);
-                        font-size: 28px;
-                    }
+                div:nth-child(1) {
+                    transform: rotate(40deg) translateY(10px) translateX(2px);
                 }
 
+                div:nth-child(2) {
+                    transform: scale(0);
+                }
 
-                &.active {
-                    transform: translateX(-20px) scale(1);
-                    max-width: 4px;
-                    flex-direction: column;
-                    align-items: start;
-                    gap: 15px;
+                div:nth-child(3) {
+                    transform: rotate(-40deg) translateY(-10px) translateX(2px);
+                }
 
+            }
 
-                    .r-m {
-                        display: flex;
-                        align-items: center;
-                        transform: translateX(-200px);
-                        gap: 12px;
+            .sign-UI {
+                width: 200px;
+                padding: 100px 20px 0;
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+                background-color: $bg-grey;
+                position: absolute;
+                height: 100vh;
+                right: 0;
+                transform: translateY(0) scale(1);
 
-                        a {
-                            text-align: center;
-                            width: 106px;
-                            padding: 4px;
-                            font-family: 'Work Sans';
-                            color: $white-color;
-                            font-weight: 600;
-                            font-size: 16px;
-                            background-color: rgba(255, 255, 255, 0);
-                            border: 0;
-                            cursor: pointer;
-                            border-radius: 10px;
+                a {
+                    padding: 10px 20px;
+                    text-decoration: none;
+                    font-family: 'Work Sans';
+                    font-weight: 600;
+                    font-size: 18px;
+                    color: $white-color;
+                    border-radius: 10px;
+                    background-color: $purple-color;
+                    text-align: center;
 
-                            &:hover {
-                                background-color: $purple-color;
-                                box-shadow: 5px 5px 30px $purple-color;
-                            }
-                        }
-
-                    }
-
-                    .sign-UI {
-                        display: flex;
-                        align-items: center;
-                        gap: 15px;
-                        transform: translateX(-200px);
-
-                        a {
-                            width: 107px;
-                            padding: 4px;
-                            font-family: 'Work Sans';
-                            color: $white-color;
-                            font-weight: 600;
-                            font-size: 16px;
-                            background-color: $purple-color;
-                            border: 0;
-                            cursor: pointer;
-                            border-radius: 10px;
-                            text-align: center;
-
-                            &:hover {
-                                background-color: $purple-color;
-                                box-shadow: 5px 5px 30px $purple-color;
-                            }
-                        }
+                    &:hover {
+                        transform: translateY(-3px);
+                        box-shadow: 5px 5px 40px $purple-color;
                     }
                 }
             }
         }
     }
-
 }
 
 
@@ -254,10 +224,6 @@
         display: flex;
         align-items: center;
         gap: 10px;
-    }
-
-    .zag.active {
-        flex-direction: column;
     }
 }
 
@@ -271,10 +237,6 @@
         h2 {
             font-size: 18px;
         }
-    }
-
-    .zag.active {
-        transform: translateX(-100%) scale(0);
     }
 }
 

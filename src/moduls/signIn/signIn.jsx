@@ -1,7 +1,6 @@
 import axios from 'axios'
 import './style.scss'
 import { useState } from 'react'
-import { json } from 'react-router-dom'
 
 
 function SignIn() {
@@ -22,7 +21,6 @@ function SignIn() {
         const login = async (e) => {
             try {
                 const response = await axios.post('https://nftmarket.pythonanywhere.com/api/v1/auth/login/', form)
-                setErrorPost(null)
                 document.getElementById('toHome').click()
                 localStorage.setItem('myAccaunt', JSON.stringify(response.data))
             } catch (error) {
